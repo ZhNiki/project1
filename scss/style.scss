@@ -1,0 +1,902 @@
+@import "variab";
+@import "mixins";
+@import "media";
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Tinos&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header__bg--pict{
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 100vw;
+    height: 800px;
+    position: absolute;
+
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+.header__flexcont--flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    flex-wrap: nowrap;
+}
+.header__flex1--flex{
+    display: flex;
+    padding-top: 60px;
+}
+.header__flex2--flex{
+    display: flex;
+    flex-direction: row;
+    padding-top: 52px;
+    gap: 30px;
+}
+.header__flex2-1--flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__flex2-2--flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    position: relative;
+    left: 10px;
+}
+.header__flex2-3--flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 15px;
+}
+.header__flex2-3-1--flex{
+    display: flex;
+    flex-direction: row;
+}
+.header__nav--flex{
+    display: flex;
+    gap: 20px;
+}
+
+.header__logo{
+    img{
+        position: relative;
+        background-color: transparent;
+    }
+}
+
+.header__nav--font1,
+.header__nav--font2,
+.header__nav--font3,
+.header__nav--font4{
+    text-decoration: none;
+    color:$navcolor;
+    position: relative;
+    background-color: transparent;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 19.07px;
+}
+
+.header__cart{
+    img{
+    position: relative;
+    background-color: transparent;
+    }
+}
+
+.header__vertline--styles{
+    position: relative;
+    border-bottom: 1px solid $commun;
+    height: 0px;
+    rotate: -90deg;
+}
+
+.header__phone{
+    img{
+        position: relative;
+        background-color: transparent;
+    }
+}
+.header__number{
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    line-height: 24.51px;
+    color: $commun;
+    background-color: transparent;
+}
+.header__number-text{
+    p{
+        position: relative;
+        height: 38px;
+        color: $commun;
+        background-color: transparent;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+    }
+}
+
+.header__button--styles{
+    position: relative;
+    background-color: $buttoncolor;
+    border: none;
+    color: $buttontextcolor;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    line-height: 19.07px;
+    cursor: pointer;
+    &:hover{
+        background-color: darken($buttoncolor, 10);
+    }
+}
+.header__threeline--style{
+    position: relative;
+    img{
+    width: 50px;
+    }
+}
+
+.header__mini-title--font{
+    position: relative;
+    background-color: transparent;
+    color: $titlecolor;
+    font-family: 'Tinos', serif;
+    font-weight: 400;
+    line-height: 57.5px;
+    text-shadow: 2px 2px 0px black, -2px -2px 0px black;
+}
+
+.header__title--font{
+    position: relative;
+    color: $titlecolor;
+    background-color: transparent;
+    font-family: 'Tinos', serif;
+    font-weight: 400;
+    text-shadow: 2px 2px 0px black, -2px -2px 0px black;
+}
+
+.header__under-title--font{
+    position: relative;
+    background-color: transparent;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: $undertitle;
+    line-height: 24.51px;
+    height: 25px;
+}
+
+.header__gorline-left{
+    position: relative;
+    background-color: $gorline;
+    width: 61px;
+    height: 2px;
+}
+.header__gorline-right{
+    position: relative;
+    background-color: $gorline;
+    width: 61px;
+    height: 2px;
+}
+
+.header__button-vmenu--styles{
+    background-color: $buttoncolor;
+    border: none;
+    color: $buttontextcolor;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    line-height: 19.07px;
+    cursor: pointer;
+    &:hover{
+        background-color: darken($buttoncolor, 10);
+    }
+}
+
+.header__block-flexcont--flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 35px;
+}
+.header__flexblock1--flex{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    @include block;
+}
+.header__flexblock2--flex{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    @include block;
+}
+.header__flexblock3--flex{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    @include block;
+}
+
+.header__block1-text--font{
+    @include fontblock;
+    position: relative;
+    height: 85px;
+}
+.header__block2-text--font{
+    @include fontblock;
+    position: relative;
+    height: 85px;
+}
+.header__block3-text--font{
+    @include fontblock;
+    position: relative;
+    height: 85px;
+}   
+
+.header__block1-title--font{
+    @include titleblock;
+    position: relative;
+}
+.header__block2-title--font{
+    @include titleblock;
+    position: relative;
+}
+.header__block3-title--font{
+    @include titleblock;
+    position: relative;
+}   
+
+.header__block1-title--font,
+.header__block2-title--font,
+.header__block3-title--font{
+    span{
+        color: $blocktitleaccent;
+    }
+}
+
+.header_block1-pict--style{
+    img{
+        @include pictblock;
+    }
+}
+.header_block2-pict--style{
+    img{
+        @include pictblock;
+    }
+}
+.header_block3-pict--style{
+    img{
+        @include pictblock;                 
+    }
+}
+
+.main__ourstory-flexcont--flex{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0px;
+}
+.main__ourstory-flex1--flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50vw;
+    gap: 10px;
+}
+.main__ourstory-flex2--flex{
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+}
+.main__ourstory-flex1-3--flex{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.main__ourstory-flex1-3-1--flex,
+.main__ourstory-flex1-3-2--flex,
+.main__ourstory-flex1-3-3--flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__ourstory-leftside-title--style{
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Tinos', serif;
+    font-weight: 400;
+    line-height: 62.09px;
+    color: $ourstorytitle;
+    span{
+        color: $ourstorytitleaccent;
+    }
+}
+.main__ourstory-leftside-text--style{
+    position: relative;
+    height: 217px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: $ourstorytext;
+}
+
+.main__ourstory-leftside-drinksnumber--font{
+    @include ourstorynumbers (46px, 54px);
+}
+.main__ourstory-leftside-foodsnumber-font{
+    @include ourstorynumbers (69px, 54px);
+}
+.main__ourstory-leftside-snacksnumber--font{
+    @include ourstorynumbers (46px, 43px);
+}
+
+.main__ourstory-leftside-drinks--font{
+    @include ourstoryeat;
+}
+.main__ourstory-leftside-food--font{
+    @include ourstoryeat;
+}
+.main__ourstory-leftside-snacks--font{
+    @include ourstoryeat;
+}   
+
+.main__ourstory-rightside-pict1--style{
+    position: relative;
+    z-index: -2;
+}
+.main__ourstory-rightside-pict2--style{
+    position: relative;
+    box-shadow: 20 0 30 3 $mainpict2shadow;
+}
+.main__ourstory-rightside-pict3--style{
+    position: relative;
+    box-shadow: 0 4 4 0 $mainpict3shadow;
+}
+.main__ourstory-rightside-pict4--style{
+    position: relative;
+    z-index: -1;
+}
+
+.main__reserv-bg--style{
+    position: relative;
+    background: url(../img/bg.png) no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 357px;
+}
+
+.main__reserv-flex1--flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+.main__reserv-flex2--flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main__reserv-button--style{
+    position: relative;
+    background-color: $buttoncolor;
+    border: none;
+    color: $buttontextcolor;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    line-height: 19.07px;
+    cursor: pointer;
+    &:hover{
+        background-color: darken($buttoncolor, 10);
+    }
+}
+
+.main__reserv-title--style{
+    position: relative;
+    height: 120px;
+    font-family: 'Tinos', serif;
+    font-weight: 400;
+    color: $reservtitle;
+}
+
+.main__reserv-undertitle--style{
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+
+    line-height: 32.68px;
+    color: $reservundertitle;
+}
+
+.main__meals-title--style{
+    position: relative;
+    text-align: center;
+    font-family: 'Tinos', serif;
+    font-weight: 400;
+    line-height: 62.09px;
+    color: $mealstitle;
+    span{
+        color: $mealstitleaccent;
+    }
+}
+
+.main__meals-flexcont--flex{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 30px;
+}
+.main__meals-flex1--flex{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.main__meals-flex2--flex{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.main__meals-pictflex--flex{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+}
+.main__meals-meal1flex--flex,
+.main__meals-meal2flex--flex,
+.main__meals-meal3flex--flex{
+    display: flex;
+    justify-content: center;
+}
+
+
+.main__meals-pict1--style{
+    position: relative;
+}
+
+.main__meals-pict2--style{
+    @include mealpict234;
+}
+.main__meals-pict3--style{
+    @include mealpict234;
+}
+.main__meals-pict4--style{
+    @include mealpict234;
+}
+
+.main__meals-meal1--style{
+    @include meals;
+}
+.main__meals-meal2--style{
+    @include meals;
+}
+.main__meals-meal3--style{
+    @include meals;
+}
+
+.main__meals-gorline1-style{
+    @include gorline;
+}
+.main__meals-gorline2-style{
+    @include gorline;
+}
+.main__meals-gorline3-style{
+    @include gorline;
+}
+
+.main__meals-prise1--style{
+    @include price;
+}
+.main__meals-prise2--style{
+    @include price;
+}
+.main__meals-prise3--style{
+    @include price;
+}
+
+.main__menu-bg--style{
+    position: relative;
+    background: url(../img/bg1.png) 50% top no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 1036px;
+    left: -1px;
+}
+
+.main__menu-flexcont--flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    gap: 50px;
+    width: 100vw;
+    max-height: 500px;
+}
+.main__menu-flex1--flex{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 285px;
+}
+.main__menu-flex2--flex{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    top:330px;
+}
+.main__menu-flex2-1--flex{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.main__menu-flex2-2--flex{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index:5;
+    bottom: 100px;
+}
+.main__menu-flex2-3--flex{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index:6;
+}
+.main__menu-flex2-4--flex{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index:7;
+}
+.main__menu-flex2-5--flex{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.main__menu-flex2-6--flex{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-left: 110px;
+}
+.main__menu-flex2-7--flex{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-left: 110px;
+}
+.main__menu-flex2-8--flex{
+    display: flex;
+    justify-content: center;
+}
+
+.main__menu-title--style{
+    position: relative;
+    z-index: 3;
+    width: 100vw;
+    background-color: $menubgtitle;
+    padding-top: 10px;
+    height: 80px;
+    text-align: center;
+    font-family: 'Tinos', serif;
+    font-weight: 400;
+    line-height: 62.09px;
+    color: $menutitle;
+    text-shadow: 5px 5px 4px $menutitleshadow;  
+    span{
+        color: $menutitleaccent;
+    } 
+}
+
+.main__menu-block1--style{
+    @include menublocks;
+}
+.main__menu-block2--style{
+    @include menublocks;
+}
+.main__menu-block3--style{
+    @include menublocks;
+}
+
+.main__menu-button1--style{
+    @include buttonmenu;
+}
+.main__menu-button2--style{
+    @include buttonmenu;
+}
+.main__menu-button3--style{
+    @include buttonmenu;
+}
+
+.main__menu-title1--style{
+    @include menutitle;
+}
+.main__menu-title2--style{
+    @include menutitle;
+}
+.main__menu-title3--style{
+    @include menutitle;
+}
+
+.main__menu-text1--style{
+    @include menutext;
+}
+.main__menu-text2--style{
+    @include menutext;
+}
+.main__menu-text3--style{
+    @include menutext;
+}
+
+
+.main__menu-recommended--style{
+    position: relative;
+    box-sizing: border-box;
+    background-color: $menurecommended;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 17.7px;
+    text-align: center;
+    color: $menurecomtext;
+}
+
+.main__menu-pict1--style{
+    img{
+        @include burgpict;
+    }
+}
+.main__menu-pict2--style{
+    img{
+        @include burgpict;
+    }
+}
+.main__menu-pict3--style{
+    img{
+        @include burgpict;
+    }
+}
+
+.main__menu-pricecircle1--style{
+    @include menucircle;
+}
+.main__menu-pricecircle2--style{
+    @include menucircle;
+}
+.main__menu-pricecircle3--style{
+    @include menucircle;
+}
+
+.main__menu-price1--style{
+    @include menuprice;
+}
+.main__menu-price2--style{
+    @include menuprice;
+}
+.main__menu-price3--style{
+    @include menuprice;
+}
+
+.main__feedback-flexcont--flex{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background-color: $feedbackbg;
+    flex-direction: column;
+    width: 100vw;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    gap: 20px;
+}
+.main__feedback-comment--position{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main__feedback-commenttext--font{
+    position: relative;
+    min-width: 250px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    color: $feedback;
+    }
+
+.main__feedback-pict--style{
+    position: relative;
+    padding-top: 20px;
+}
+
+.main__feedback-user--style{
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    line-height: 27.24px;
+    color: $feedbackuser;
+}
+
+.main__feedback-name--style{
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 27.24px;
+    color: $feedbackname;
+}
+
+.main__feedback-circles--position{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3px;
+}
+
+.main__feedback-circle1--style{
+    @include feedbackcircle;
+}
+.main__feedback-circle2--style{
+    @include feedbackcircle;
+}
+.main__feedback-circle3--style{
+    position: relative;
+    box-sizing: border-box;
+    border: 2px solid $feedbackcircleborder3;
+    border-radius: 50%;
+}
+
+.main__gallery-title--style{
+    position: relative;
+    width: 100vw;
+    text-align: center;
+    font-family: 'Tinos', serif;
+    font-weight: 400;
+    line-height: 62.09px;
+    color: $gallerytitle;
+    span{
+        color: $gallerytitleaccent;
+    }
+}
+
+.main__gallery-container--flex{
+    display: flex;
+    justify-content: space-between;
+    position: absolute; 
+    width: 100vw;
+    top: 120px;
+}
+.main__gallery-redblock1--style,
+.main__gallery-redblock2--style{
+    @include redblocks;
+}
+
+.main_gallery-flexcont--flex{
+    display: flex;
+    position: relative;    
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 84px;
+    padding: 0px 60px;
+}
+.main__gallery-flexcont1--flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.main__gallery-flexcont2--flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+
+.main__gallery-pict1--style{
+    @include gallery;
+}
+.main__gallery-pict2--style{
+    @include gallery;
+}
+.main__gallery-pict3--style{
+    @include gallery;
+}
+.main__gallery-pict4--style{
+    @include gallery;
+}
+.main__gallery-pict5--style{
+    @include gallery;
+}
+.main__gallery-pict6--style{
+    @include gallery;
+}
+
+.main__cooks-flexcont--flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.main__cooks-title--style{
+    position: relative;
+    padding-top: 50px;
+    width: 100vw;
+    padding-top: 60px;
+    text-align: center;
+    font-family: 'Tinos', serif;
+    font-weight: 400;
+    line-height: 62.09px;
+    color: $cookstitle;
+    span{
+        color: $cookstitleaccent;
+    }
+}
+
+.main__cooks-pict--position{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    position: relative;
+    padding-top: 100px;
+}
+
+.main__cooks-pict1--style{
+    @include cooks;
+}
+.main__cooks-pict2--style{
+    @include cooks;
+}
+.main__cooks-pict3--style{
+    @include cooks;
+}
+
+.footer__copyright--style{
+    position: relative;
+    width: 100vw;
+    background-color: $footerbg;
+    color: $footerfont;
+    text-align: center;
+    padding: 50px 0px;
+    font-family: 'Tinos', serif;
+    font-size: 30px;
+}

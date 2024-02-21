@@ -1,0 +1,160 @@
+@mixin block{
+    position: relative;
+    background-color:$headerblock;
+    box-shadow: 10px 10px 40px 20px rgba(0, 0, 0, 0.1);
+}
+
+@mixin fontblock{
+    font-family: 'Tinos', serif;
+    font-weight: 400;
+    line-height: 29.9px;
+    text-align: center;
+    color: $blocktextcolor;
+}
+
+@mixin titleblock{
+    font-family: 'Tinos', serif;
+    font-weight: 400;
+    line-height: 29.9px;
+    color: $blocktitlecolor;
+}
+
+@mixin pictblock{
+    position: relative;
+    top:10px;
+}
+
+@mixin ourstorynumbers ($width,$height) {
+    position: relative;
+    width: $width;
+    height: $height;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 54.47px;
+    text-align: center;
+    color: $ourstorynumbers;
+}
+
+@mixin ourstoryeat {
+    position: relative;
+    height: 27px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 27.24px;
+    text-align: center;
+    color: $ourstoryeat;
+}
+
+@mixin mealpict234{
+    position: relative;
+}
+
+@mixin meals {
+    position: relative;
+    height: 30px;
+    font-family: 'Tinos', serif;
+    font-weight: 400;
+    line-height: 29.9px;
+    color: $mealtext;
+}
+
+@mixin gorline {
+    position: relative;
+    width: 204px;
+    border-bottom: 1px dashed $bordermeal;
+    rotate: -0.14deg;
+    top: -12px;
+}
+
+@mixin price {
+    position: relative;
+    height: 30px;
+    font-family: 'Tinos', serif;
+    font-weight: 400;
+    line-height: 29.9px;
+    color: $mealtext;
+}
+
+@mixin menublocks{
+    position: relative;
+    background-color: $menublockbg;
+    margin: 20px 15px;
+}
+
+@mixin buttonmenu{
+    position: relative;
+    background-color: $menubutton;
+    box-shadow: 5px 5px 10px $menubuttonshadow;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    line-height: 21.79px;
+    text-align: center;
+    color: $menubuttontext;
+    cursor: pointer;
+    &:hover{
+        background-color: darken($buttoncolor, 10);
+    }
+}
+
+@mixin menutitle {
+    position: relative;
+    height: 30px;
+    font-family: 'Tinos', serif;
+    font-weight: 400;
+    line-height: 29.9px;
+    color: $menublocktitle;
+}
+
+@mixin menutext{
+    position: relative;
+    width: 226px;
+    height: 37px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: $menublocktext;
+}
+
+@mixin burgpict{
+     position: relative;
+     width: 225px;
+     height: 225px;
+}
+
+@mixin menucircle{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 7px solid $menucircle;
+    border-radius: 50%;
+    background-color: $menubgcircle;
+}
+
+@mixin menuprice{
+    position: relative;
+    font-family: 'Cookie', cursive;
+    font-weight: 400;
+    line-height: 33.27px;
+    color: $menuprice;
+}
+
+@mixin feedbackcircle {
+    position: relative;
+    background-color: $feedbackcircle;
+    border-radius: 50%;
+}
+
+@mixin redblocks { 
+    width: 30px;
+    height: 100px;
+    background-color: $galleryredblock;
+}
+
+@mixin gallery{
+    position: relative;
+}
+
+@mixin cooks {
+    position: relative;
+}
